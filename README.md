@@ -3,7 +3,7 @@
 Implementar las clases y los metodos descritos en la siguente figura, que representa un congreso de computación.
 
 
-### Descrición del codigo
+### Descripción del codigo
 
 Clases: Autor, Contribucion, Ponencia, Taller
 
