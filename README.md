@@ -7,6 +7,9 @@ Implementar las clases y los metodos descritos en la siguente figura, que repres
 
 Clases: Autor, Contribucion, Ponencia, Taller
 
+Las clases Ponencia y Taller se extienden de la Clase Contribución, y heredan sus metodos.
+Las clases Autor y Contribucion tienen una relacion "one-to-many" pues un autor puede tener multiples Contribuciones. 
+
 Se ejecuta un programa 'main' para representar la interaccion de las clases.
 Las siguientes son las pruebas ejecutadas:
 
@@ -22,7 +25,32 @@ Las siguientes son las pruebas ejecutadas:
 
 Desarrolle una solucion que requiera la implementación de una clase abstracta y una implementación de Interfase, posterior a esto compare ambas soluciones y explique escenarios posibles de cuando es necesario utilizar cada una en un proyecto.
 
+
 ### Respuesta
-La clases abstracta sirve como una plantilla para objetos, en la cual se definen los metodos que dichos objetos deben tener, pero no se realiza la implementación de los metodos. Esta clase inicial no puede ser instanciada ya que sus metodos estan vacios, la implementación de cada metodo se hace en las subclases.
- 
-En Python solo existen las clases abstractas, no tiene Interface, ya que soporta herencia multiple no las requiere
+
+Se realiza un caso básico para Python con los archivps
+- abstract.py
+- interface2.py
+
+Las clases abstractas y las interfases se emplean para implementar herencia y definir comportamientos de los objetos. Pero tienen las siguientes diferencias:
+- Las clases Abstractas pueden tener constructores, las Interfases no.
+- Las clases Abstractas pueden tener metodos abstractos y no abstractos, las Interfases solo metodos abstractos.
+- En las clases Abstractas se puede definir los permisos de acceso (public, private), en Interfases todos los metodos son publicos.
+
+Las Clases Abstractas e Interfases no se manejan de la misma forma en todos los lenguajes:
+
+- En Java las clases Abstractas se implementan con el keyword "extend", y las Interfases con "implements".
+- En Java las clases Abstractas no soportan herencia multiple, en cambio las Interfases si pueden hacerlo. 
+- En Python solo existen las clases abstractas, no tiene Interface, ya que si soportan la herencia multiple.
+
+*Como elegir cual utilizar?*
+
+Abtract Clases:
+- Si hay clases relacionadas que requieren compartir codigo, este se "extiende" de la clase Abstracta
+- Si se requiere iniciar variables que despues podran ser accesadas y modificadas via metodos
+- Si se requiere asignar permisos de acceso a los metodos
+
+Interfases:
+- Si la abstraccion es total, y todos los metodos deben ser definidos por las subclases
+- En el caso de Java, si se requiere Herencia Multiple
+- Si se quiere especificar los metodos requeridos, pero no es importante quien o como los implementara.
